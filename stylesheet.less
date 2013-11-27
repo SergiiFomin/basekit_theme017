@@ -253,6 +253,12 @@ body {
   padding-top: 30px;
 }
 
+.mainbottom{
+  background-color: #f9fafb;
+  border-top: 1px solid #d8dadc;
+  padding-top: 30px;  
+}
+
 .wrapper {
   width: 100%;
   margin: 0%;
@@ -283,6 +289,11 @@ p {
   padding: 0 0 @baseLineHeight;
 }
 
+h1, h2, h3, h4, h5{
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   font-family:@font-swatch1-font-family;
   font-weight: @font-swatch1-font-weight;
@@ -310,7 +321,7 @@ h3{
   line-height:@font-swatch3-line-height;
   color: @font-swatch3-color;
   letter-spacing: @font-swatch3-letter-spacing;
-  margin: 0;
+  margin-bottom: 10px;
   padding: 0;
 }
 
@@ -362,7 +373,6 @@ blockquote:before {
 /* DEAFULT PAGE TYPES */
 
 .top{
-
   background-color: #142032;
 }
 
@@ -462,6 +472,10 @@ header {
 
 div.widget[id$="copyright"]{
   display: inline;
+}
+
+.widget.image{
+  margin-bottom: @baseLineHeight;
 }
 
 /* LOGO */
