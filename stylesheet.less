@@ -1,9 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic);
 @import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic);
 
 /*
   font-family: 'Lato', sans-serif;
   font-family: 'Oswald', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 */
 
 
@@ -49,6 +51,7 @@
 
 @altFontFamily:         'Lato', sans-serif;
 @OswaldFontFamily:      'Oswald', sans-serif;
+@RobotoFontFamily:      'Roboto Condensed', sans-serif;
 
 @headingsFontFamily:    @sansFontFamily; // empty to use BS default, @baseFontFamily
 @headingsFontWeight:    normal;    // instead of browser default, bold
@@ -326,7 +329,7 @@ h3{
 }
 
 h4{
-  font-family:@font-swatch4-font-family;
+  font-family: 'Oswald', sans-serif;
   font-size:@font-swatch4-font-size;
   font-weight:@font-swatch4-font-weight;
   line-height:@font-swatch4-line-height;
@@ -341,20 +344,17 @@ ul, ol, li {
 }
 
 blockquote {
-  background: lighten(@color-swatch5,20%);
+  border: none;
   margin:0;
-  padding: 20px;
-  quotes:"\201C""\201D""\2018""\2019";
-  font-family:@font-swatch5-font-family;
-  font-size:@font-swatch5-font-size;
-  font-weight:@font-swatch5-font-weight;
-  line-height:@font-swatch5-line-height;
-  color:@font-swatch5-color;
+  padding: 0px;
+  h4{
+    text-align: right;
+  }
 }
 
 blockquote:before {
   font-family: georgia;
-  color: @font-swatch5-color;
+  color: @font-swatch3-color;
   content:open-quote;
   font-size:4em;
   line-height:.1em;
@@ -754,7 +754,6 @@ footer {
   span.image-title {
     display: block;
     margin: 5px;
-    font-family: @font-swatch4-font-family;
     font-weight: @font-swatch4-font-weight;
     font-size: @font-swatch4-font-size;
     text-align: center;
@@ -893,7 +892,6 @@ hr.line.align-right {
   }
   .twitter-content{
     span.bk-full-name {
-      font-family: @font-swatch4-font-family;
       color: @color-swatch3;
       font-weight: bold;
     }
@@ -926,6 +924,39 @@ ul.posts{
     }
     p{
       padding: 0;
+    }
+    figure{
+      .widget.image{
+        margin-bottom: 0;
+      }
+    }
+    > .widget.content{
+      float: left;
+      margin-right: 20px;
+      background: @color-swatch3;
+      width: 30px;
+      text-align: center;
+      color: @color-swatch1;
+      .drop{
+        font-family: @RobotoFontFamily;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+ul.imagelist{
+  margin: 0;
+  li{
+    list-style: none;
+    float: left;
+    background-color: #f1f3f5;
+    margin-bottom: 1%;
+    margin-right: 1%;
+    width: 32%;
+    > .content{
+      padding: 9px;
+      border: 1px solid #d5d6d7;
     }
   }
 }
@@ -968,7 +999,6 @@ input[type="color"], .uneditable-input {
     label {
       width: 100%;
       float: none;
-      font-family:@font-swatch4-font-family;
       font-size:font-swatch4-font-size;
       font-weight:@font-swatch4-font-weight;
       line-height:@font-swatch4-line-height;

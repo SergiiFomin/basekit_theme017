@@ -63,22 +63,21 @@
         "font2": {
             "font-size": "19px",       
             "font-weight": "inherit",
-            "line-height": "30px",  
+            "line-height": "20px",  
             "color": "@color-swatch4", 
             "letter-spacing": "inherit"
         },
         "font3": {   
             "font-size": "15px",       
             "font-weight": "inherit",  
-            "line-height": "30px",  
+            "line-height": "20px",  
             "color": "@color-swatch3", 
             "letter-spacing": "inherit"
         },
         "font4": {
-            "font-family": "Helvetica, arial",
-            "font-size": "16px",       
+            "font-size": "12px",       
             "font-weight": "inherit",  
-            "line-height": "inherit",  
+            "line-height": "18px",  
             "color": "@color-swatch4", 
             "letter-spacing": "inherit"
         },
