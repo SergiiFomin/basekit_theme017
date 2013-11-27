@@ -56,14 +56,14 @@
             "font-family": "Helvetica, arial",     
             "font-size": "36px",       
             "font-weight": "inherit",  
-            "line-height": "36px",     
+            "line-height": "40px",     
             "color": "@color-swatch4", 
             "letter-spacing": "inherit"
         },
         "font2": {
             "font-size": "19px",       
             "font-weight": "inherit",
-            "line-height": "24px",  
+            "line-height": "28px",
             "color": "@color-swatch4", 
             "letter-spacing": "inherit"
         },
