@@ -424,36 +424,10 @@ header {
   padding-top: 23px;
 }
 
-.companyheader{
-  margin: 0;
-  padding: 0;
-  .companyheader{
-    display: inline-block;
+.widget.logo{
+  .logo{
+    display: inline;
   }
-  a{
-    color: @color-swatch3;
-    text-decoration: none;
-    position: relative;
-    &:hover{
-      color: @color-swatch1;
-    }
-    .logo{
-      margin: 0px;
-      font-size: 0;
-      line-height: 0;
-      img{
-        display: block;
-      }
-      a{
-        display: inline-block;
-      }   
-    }
-    .company-name{
-      font: 15px/19px Times New Roman, Times, serif;
-      color: #afaca7;
-      letter-spacing: 4px;
-    }
-  }   
 }
 
 /* COMPANY NAME */
@@ -485,9 +459,16 @@ div.widget[id$="copyright"]{
 ul.img-list{  
   border-left: 1px dotted #b2b2b2;
   border-right: 1px dotted #b2b2b2;
+  display: table;
+  margin: 0;
+  width: 100%;
   li{
-    display: inline-block;
-    margin: 0 40px;
+    display: table-cell;
+    text-align: center;
+    .widget.image {
+      display: inline-block;
+      margin: 0;
+    }
   }
 }
 
@@ -947,6 +928,7 @@ ul.posts{
 
 ul.imagelist{
   margin: 0;
+  overflow: hidden;
   li{
     list-style: none;
     float: left;
@@ -1563,6 +1545,10 @@ ul.posts{
 /* Large desktop */
 @media (max-width: 1200px) {
 
+  .widget.extendednavigation ul > li {
+    padding: 0 30px;
+  }
+
 } 
 
 /*== Up to 980px ======================================================
@@ -1570,6 +1556,10 @@ ul.posts{
 
 /* Narrow desktop */
 @media (max-width: 980px) {
+
+  .widget.extendednavigation ul > li {
+    padding: 0 16px;
+  }
 
 }
 
@@ -1595,36 +1585,24 @@ ul.posts{
     *display: block;
     *float: left;
     ul {
-      display: table-row;
+      display: table;
       width: 100%;
       float: none!important;
       text-align: center;
       li {
         display: table-cell !important;
         float: none!important;
-        padding: 0.6em;
-        background-color: lighten(@color-swatch5,17%);
-        border-left: 14px solid @color-swatch1;
-        &:first-child {
-          border-left: 0;
-        }
-        &.folder {
-          background-image: image('/images/arrow-down-ipad.png')!important;
-          background-position: right center;
-          background-repeat: no-repeat;
-        }
+        text-align: center;
         &.selected {
           border-bottom: 2px solid lighten(@color-swatch5,15%);
         }
         &:hover {
           padding-bottom: 0;
-          background-color: lighten(@color-swatch5,18%);
         }
         &:hover > ul {
           width: 164px;
           margin-left: -9px;
           padding-top: 10px;
-          background-color: lighten(@color-swatch5,18%);
           li {
             display: block!important;
             border: 0!important;
@@ -1652,6 +1630,13 @@ ul.posts{
       }
     }
   }
+
+  .widget.logo,
+  div.widget[id$="companydescription"],
+  ul.top-list {
+    text-align: center;
+  }
+
 }
 
 /*== Up to 640px ==================================================
@@ -1706,7 +1691,7 @@ ul.posts{
                 padding: 0;
               }
               .text:hover {
-                padding: 1.4em 1em;
+                padding: .4em 1em;
               }
             }
           }
@@ -1718,16 +1703,16 @@ ul.posts{
         &.folder {
           padding: 0;
           .text {
-            padding: 1.4em 1em;
+            padding: .4em 1em;
             margin-left: 0;
           }
         }
         a {
           border-left: 0;
           border-right: 0;
-          padding: 1.4em 1em;
+          padding: .4em 1em;
           &:hover {
-            padding: 1.4em 1em;
+            padding: .4em 1em;
           }
         }
         &:last-child {
@@ -1735,6 +1720,14 @@ ul.posts{
         }
       }
     }
+  }
+  ul.img-list li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  figure.staff{
+    float: none;
+    margin-right: 0;
   }
 }
 
